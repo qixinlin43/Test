@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Chess Engine</h1>
+
+        <div class="game-info">
+            <div class="status" id="status">Select your color to start</div>
+            <div class="controls">
+                <button id="whiteBtn" class="btn">Play as White</button>
+                <button id="blackBtn" class="btn">Play as Black</button>
+                <button id="newGameBtn" class="btn" style="display:none;">New Game</button>
+            </div>
+        </div>
+
+        <div class="board-container">
+            <div id="chessboard" class="chessboard"></div>
+        </div>
+
+        <div class="move-log">
+            <h3>Move History</h3>
+            <div id="moveHistory"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
